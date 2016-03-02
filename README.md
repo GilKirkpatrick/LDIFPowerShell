@@ -1,4 +1,4 @@
-LDIFPowerShell
+﻿LDIFPowerShell
 ==============
 
 PowerShell support for processing Active Directory LDIF files
@@ -11,8 +11,12 @@ LDIF file sorted by last name, you would do something like this:
 
 Get-LDIFRecords domain.ldif | Where {$_.objectClass –eq ‘user’ } | Select givenName, sn | Sort sn
 
-The included binary module LDIFDistinguishedName provides special functions for manipulating distinguished names. The
-LDIFDistinguishedName class exposes member functions to retrieve the RDN, the name and type of the RDN, the parent 
+The included binary module LDIFDistinguishedName is a PowerShell snapin, and provides special functions for manipulating 
+distinguished names. You must import it into your PowerShell session using Import-Module, e.g.
+
+PS > Import-Module LDIFDistinguishedName.dll
+
+The LDIFDistinguishedName class exposes member functions to retrieve the RDN, the name and type of the RDN, the parent 
 container distinguished name, the depth of the name in the tree, as well as an array containing the parent hierarchy. 
 This simplies certain problems when trying to clone an Active Directory environment to a test environment, for instance, 
 creating the container hierarchy. Because the records in the LDIF file aren't guaranteed to be in breadth-first tree order, 

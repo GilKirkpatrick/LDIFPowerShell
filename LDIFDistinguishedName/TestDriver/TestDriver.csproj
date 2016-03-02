@@ -49,7 +49,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="d:\users\Gil\OneDrive\VM Powershell\LDIFDistinguishedName\LDIFDistinguishedName\LDIFDistinguishedName.csproj">
+    <ProjectReference Include="..\LDIFDistinguishedName\LDIFDistinguishedName.csproj">
       <Project>{05012aaa-244f-462e-bb50-564156cb0ae7}</Project>
       <Name>LDIFDistinguishedName</Name>
     </ProjectReference>
