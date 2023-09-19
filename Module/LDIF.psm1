@@ -78,7 +78,7 @@ Function Get-LDIFRecords
 	)
 
 	$Script:lineNo = 0
-	$path = "$(pwd)\$InputFile"
+	$path = (Get-Item -LiteralPath $InputFile).FullName
 	$file = New-Object System.IO.StreamReader -Arg $path
 	if(!$file){
 		throw "Can't open $InputFile"
